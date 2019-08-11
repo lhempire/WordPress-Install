@@ -15,10 +15,10 @@ define( 'WPRI_VERSION'    , '1.0.0' );
 $suggestions = array(
 
   # 可以是每个插件的URL数组，也可以是文本文件的字符串URL，并在新行上为每个插件提供URL
-  plugins' => 'http://' . GITHUB_USERNAME . '.github.com/' . GITHUB_PROJECT .'/list-plugin.txt
+  plugins' => 'http://' . GITHUB_USERNAME . '.github.io/' . GITHUB_PROJECT .'/list-plugin.txt
 
  # 可以是每个主题的URL数组，也可以是文本文件的字符串URL，并在新行中为每个主题提供URL
- 'themes'  => 'http://' . GITHUB_USERNAME . '.github.com/' . GITHUB_PROJECT .'/list-theme.txt'
+ 'themes'  => 'http://' . GITHUB_USERNAME . '.github.io/' . GITHUB_PROJECT .'/list-theme.txt'
 
 );
 
@@ -109,7 +109,7 @@ function downloadFromURL( $url = null , $local = null ){
   return $result;
 }
 function getGithubVersion(){
-  $versionURL = 'https://' . GITHUB_USERNAME . '.github.com/' . GITHUB_PROJECT .'/version.txt';
+  $versionURL = 'https://' . GITHUB_USERNAME . '.github.io/' . GITHUB_PROJECT .'/version.txt';
   $remoteVersion = null;
   if( !( $remoteVersion = @file_get_contents( $versionURL ) )
       && function_exists( 'curl_init' ) ){
